@@ -107,7 +107,7 @@ module.exports.logIn = async (req, res) => {
 
         // check if user is blocked
         if (user.isBlocked) {
-            const leftTime = 10 - Math.ceil((Date.now() - user.lockedAt.getTime()) / (60 * 1000));
+            const leftTime = 60 - Math.ceil((Date.now() - user.lockedAt.getTime()) / (60 * 1000));
             if (leftTime > 0) {
                 return res.status(403).json(`user is blocked .try again after ${leftTime} min`)
             } else {
