@@ -13,11 +13,11 @@ API Deployed on : https://otpbasedlogin-blun.onrender.com/
   6. otp-generator
 
 ## Features
- 1. signUp :  Users can create an account by providing their email address.
+ 1. api/user/signUp :  Users can create an account by providing their email address.
 
- 2. OTP Generation : An OTP is generated and sent to their registered email address.
+ 2. api/user/generateOtp : An OTP is generated and sent to their registered email address.
 
- 3. OTP verification: Users must enter the correct OTP within a     specified time limit to log in successfully.
+ 3. api/user/LogIn: Users must enter the correct OTP within a     specified time limit to log in successfully.
 
 
 ## How to use :
