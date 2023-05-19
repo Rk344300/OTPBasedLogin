@@ -1,5 +1,5 @@
 const express = require('express');
-const { signUp, logIn } = require('../Controllers/userController');
+const { signUp, logIn, generateOtp } = require('../Controllers/userController');
 
 const router = express.Router();
 
@@ -7,7 +7,8 @@ const router = express.Router();
 router.route('/signUp')
     .post(signUp);
 
-
+router.route('/generateOtp')
+    .post(generateOtp);
 // Login route
 router.route('/logIn').post(logIn);
 
